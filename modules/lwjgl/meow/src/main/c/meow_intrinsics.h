@@ -147,6 +147,7 @@ typedef struct {
 #define MeowU32From(A, I) (vgetq_lane_u32(vreinterpretq_u32_u8((A)), (I)))
 #define MeowU64From(A, I) (vgetq_lane_u64(vreinterpretq_u64_u8((A)), (I)))
 
+#if 0
 static int
 MeowHashesAreEqualImpl(meow_u128 A, meow_u128 B)
 {
@@ -164,6 +165,8 @@ MeowHashesAreEqualImpl(meow_u128 A, meow_u128 B)
 }
 
 #define MeowHashesAreEqual(A, B) MeowHashesAreEqualImpl((A), (B))
+#endif
+#define MeowHashesAreEqual(A, B) (((A).n128_u32[0] == (B).n128_u32[0]) && ((A).n128_u32[1] == (B).n128_u32[1]) && ((A).n128_u32[2] == (B).n128_u32[2]) && ((A).n128_u32[3] == (B).n128_u32[3]))
 
 static meow_aes_128
 Meow128_AESDEC(meow_aes_128 Prior, meow_u128 Xor)

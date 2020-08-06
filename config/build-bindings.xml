@@ -22,15 +22,15 @@ This script is included in /config/build-definitions.xml.
         </or>
     </condition>
 
-    <property name="binding.assimp" value="true"/>
-    <property name="binding.bgfx" value="true"/>
-    <property name="binding.bullet" value="true"/>
+    <property name="binding.assimp" value="false"/>
+    <property name="binding.bgfx" value="false"/>
+    <property name="binding.bullet" value="false"/>
     <property name="binding.cuda" value="true"/>
-    <property name="binding.driftfx" value="true"/>
+    <property name="binding.driftfx" value="false"/>
     <property name="binding.egl" value="true"/>
     <property name="binding.glfw" value="true"/>
     <property name="binding.jawt" value="true"/>
-    <property name="binding.jemalloc" value="true"/>
+    <property name="binding.jemalloc" value="false"/>
     <property name="binding.libdivide" value="true"/>
     <property name="binding.llvm" value="true"/>
     <property name="binding.lmdb" value="true"/>
@@ -46,17 +46,17 @@ This script is included in /config/build-definitions.xml.
     <condition property="binding.nfd" value="true" else="false"><isset property="notARM"/></condition>
     <property name="binding.nuklear" value="true"/>
     <property name="binding.odbc" value="true"/>
-    <property name="binding.openal" value="true"/>
+    <property name="binding.openal" value="false"/>
     <property name="binding.opencl" value="true"/>
     <property name="binding.opengl" value="true"/>
     <property name="binding.opengles" value="true"/>
     <condition property="binding.openvr" value="true" else="false"><isset property="notARM"/></condition>
-    <property name="binding.opus" value="true"/>
+    <property name="binding.opus" value="false"/>
     <property name="binding.par" value="true"/>
     <property name="binding.remotery" value="true"/>
     <property name="binding.rpmalloc" value="true"/>
-    <property name="binding.shaderc" value="true"/>
-    <property name="binding.spvc" value="true"/>
+    <property name="binding.shaderc" value="false"/>
+    <property name="binding.spvc" value="false"/>
     <condition property="binding.sse" value="true" else="false"><isset property="notARM"/></condition>
     <property name="binding.stb" value="true"/>
     <property name="binding.tinyexr" value="true"/>

@@ -144,7 +144,7 @@ EXPORTS
 
         <parallel threadsPerProcessor="1">
 
-        <!-- CORE -->
+        <!-- CORE -|->
         <build module="core" flags="/Wall /WX /wd4710 /wd4711">
             <compileargs>
                 <arg value="/I${src.main}\dyncall"/>
@@ -170,6 +170,7 @@ EXPORTS
                 </fileset>
             </link>
         </build>
+		-->
 
         <!-- BULLET -->
         <build module="bullet" simple="true" if:true="${binding.bullet}">
@@ -484,7 +485,9 @@ EXPORTS
             <update-dependency module="assimp" artifact="assimp.dll"/>
             <update-dependency module="bgfx" artifact="bgfx.dll"/>
             <update-dependency module="jemalloc" artifact="jemalloc.dll"/>
+			<!--
             <update-dependency module="glfw" artifact="glfw.dll"/>
+			-->
             <update-dependency module="openal" artifact="OpenAL.dll"/>
             <update-dependency module="openvr" artifact="openvr_api.dll"/>
             <update-dependency module="opus" artifact="opus.dll"/>
